@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.baobrien.chickencontrol.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/doButton"
+        android:layout_width="0dp"
+        android:layout_height="12mm"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Open Door"
+        app:layout_constraintEnd_toStartOf="@+id/dcButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dcButton"
+        android:layout_width="0dp"
+        android:layout_height="12mm"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:text="Close Door"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/doButton"
+        app:layout_constraintTop_toTopOf="@+id/doButton" />
+
+    <Button
+        android:id="@+id/dotButton"
+        android:layout_width="0dp"
+        android:layout_height="12mm"
+        android:layout_marginTop="8dp"
+        android:text="Open Door \n(15 Minutes)"
+        app:layout_constraintEnd_toEndOf="@+id/doButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/doButton"
+        app:layout_constraintTop_toBottomOf="@+id/doButton" />
+
+    <Button
+        android:id="@+id/dctButton"
+        android:layout_width="0dp"
+        android:layout_height="12mm"
+        android:text="Close Door\n(15 Minutes)"
+        app:layout_constraintEnd_toEndOf="@+id/dcButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/dcButton"
+        app:layout_constraintTop_toTopOf="@+id/dotButton" />
+
+    <Button
+        android:id="@+id/dsButton"
+        android:layout_width="0dp"
+        android:layout_height="12mm"
+        android:layout_marginTop="8dp"
+        android:text="Sunrise/Sunset Mode"
+        app:layout_constraintEnd_toEndOf="@+id/dctButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dotButton"
+        app:layout_constraintTop_toBottomOf="@+id/dotButton" />
+
+    <Button
+        android:id="@+id/rfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/dsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Door Mode Unknown"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintEnd_toEndOf="@+id/dsButton"
+        app:layout_constraintStart_toStartOf="@+id/dsButton"
+        app:layout_constraintTop_toBottomOf="@+id/dsButton" />
+
+    <TextView
+        android:id="@+id/RefreshStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/rfButton"
+        app:layout_constraintEnd_toEndOf="@+id/rfButton" />
+
+    <TextView
+        android:id="@+id/temperatureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="..."
+        app:layout_constraintStart_toStartOf="@+id/dsText"
+        app:layout_constraintTop_toBottomOf="@+id/dsText" />
+
+</android.support.constraint.ConstraintLayout>
